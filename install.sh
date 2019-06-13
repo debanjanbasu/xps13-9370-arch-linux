@@ -8,4 +8,4 @@ echo "Please ensure that you have wifi configured"
 
 # Part for running sfdisk
 echo "Partinioning disk now..."
-sfdisk /dev/sda < xps256gbssd.sfdiskfdisk
+sfdisk /dev/sda < xps256gbssd.sfdisk
