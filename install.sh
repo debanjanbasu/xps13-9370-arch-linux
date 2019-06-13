@@ -76,10 +76,10 @@ title Arch Linux
 linux /vmlinuz-linux
 initrd /intel-ucode.img
 initrd /initramfs-linux.img
+options quiet mem_sleep_default=deep
 EOT
 
 # Section to turn on trim and reduced reserved block
 echo "Optimizing disks TRIM and noatime..."
 tune2fs -m 1 -o discard,noatime /dev/nvme0n1
 sed 's/\<relatime,\>//g' /etc/fstab
-
