@@ -4,11 +4,9 @@
 # Copyright (c) Debanjan Basu
 # Script follows here:
 
-echo "Please ensure that you have wifi configured"
+echo "Please ensure that you have wifi configured and the partitions formatted. Refer to original Arch Installation wiki please."
 
 # Running sfdisk and creating the partitions
-echo "Partinioning disk now...\n"
-sfdisk /dev/sda <xps256gbssd.sfdisk
 echo "Fomatting disk now...\n"
 mkfs.fat -F32 /dev/nvme0n1p1
 mkfs.ext4 /dev/nvme0n1p2 -L ROOT
