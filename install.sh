@@ -79,7 +79,7 @@ title Arch Linux
 linux /vmlinuz-linux
 initrd /intel-ucode.img
 initrd /initramfs-linux.img
-options root=LABEL=BOOT quiet mem_sleep_default=deep
+options root=LABEL=ROOT quiet mem_sleep_default=deep
 EOT
 
 # Section to turn on trim and reduced reserved block
