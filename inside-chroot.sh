@@ -1,3 +1,10 @@
+    
+#!/bin/sh
+
+# Author : Debanjan Basu <debanjanbasu2006@gmail.com>
+# Copyright (c) Debanjan Basu
+# Script follows here:
+
 ln -sf /usr/share/zoneinfo/Australia/Sydney /etc/localtime
 hwclock --systohc
 
@@ -45,3 +52,4 @@ initrd /intel-ucode.img
 initrd /initramfs-linux.img
 options root=LABEL=ROOT quiet mem_sleep_default=deep
 EOT
+
