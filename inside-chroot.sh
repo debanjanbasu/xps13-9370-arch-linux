@@ -51,6 +51,6 @@ title Arch Linux
 linux /vmlinuz-linux
 initrd /intel-ucode.img
 initrd /initramfs-linux.img
-options root=LABEL=ROOT quiet mem_sleep_default=deep
+options root=LABEL=ROOT mem_sleep_default=deep rw
 EOT
 
