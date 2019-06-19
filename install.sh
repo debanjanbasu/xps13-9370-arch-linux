@@ -9,7 +9,7 @@ echo "Please ensure that you have wifi configured and the partitions formatted. 
 # Running sfdisk and creating the partitions
 echo "Fomatting disk now...\n"
 mkfs.fat -F32 /dev/nvme0n1p1
-mkfs.ext4 /dev/nvme0n1p2 -L ROOT
+y | mkfs.ext4 /dev/nvme0n1p2 -L ROOT
 mkswap /dev/nvme0n1p3 -L SWAP
 swapon --discard /dev/nvme0n1p3
 
@@ -84,5 +84,4 @@ EOT
 
 # Section to turn on trim and reduced reserved block
 echo "Optimizing disks TRIM and noatime..."
-tune2fs -m 1 -o discard,noatime /dev/nvme0n1
-sed 's/\<relatime,\>//g' /etc/fstab
+tune2fs -m 1 -o discard /dev/nvme0n1p2
