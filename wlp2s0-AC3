@@ -10,7 +10,7 @@ WPAConfigSection=(
  'key_mgmt=WPA-EAP'
  'anonymous_identity="debanjan.basu"'
  'proto=RSN'
- 'password="kx39jp27zz1j6pEn"'
- 'phase2="auth=MSCHAPV2 password=kx39jp27zz1j6pEn"'
+ 'password="<password>"'
+ 'phase2="auth=MSCHAPV2 password=<password>"'
  'eap=PEAP'
 )
