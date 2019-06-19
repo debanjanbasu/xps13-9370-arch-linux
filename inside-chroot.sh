@@ -17,7 +17,8 @@ locale-gen
 
 # Updating and creating hostnames
 echo "Updating hostname and hosts...\n"
-MYHOSTNAME = "debxps13"
+
+MYHOSTNAME=debxps13
 
 echo "$MYHOSTNAME" >/etc/hostname
 # Add to hosts
