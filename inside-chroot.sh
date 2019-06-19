@@ -16,7 +16,7 @@ echo LANG=en_US.UTF-8 >/etc/locale.conf
 locale-gen
 
 # Updating and creating hostnames
-echo "Updating hostname and hosts..."
+echo "Updating hostname and hosts...\n"
 
 MYHOSTNAME=debxps13
 
