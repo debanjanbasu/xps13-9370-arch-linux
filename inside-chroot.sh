@@ -54,3 +54,6 @@ initrd /initramfs-linux.img
 options root=LABEL=ROOT mem_sleep_default=deep rw
 EOT
 
+# Section to turn on trim and reduced reserved block
+echo "Optimizing disks TRIM and noatime..."
+tune2fs -m 1 -o discard /dev/nvme0n1p2
