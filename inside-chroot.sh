@@ -12,7 +12,7 @@ hwclock --systohc
 sed -i '/#en_US.UTF-8 UTF-8/s/^#//g' /etc/locale.gen
 
 # Add in /etc/locale.conf
-echo LANG=en_US.UTF-8 >/etc/locale.conf
+echo LANG=en_US.UTF-8 > /etc/locale.conf
 locale-gen
 
 # Updating and creating hostnames
@@ -54,6 +54,6 @@ initrd /initramfs-linux.img
 options root=LABEL=ROOT mem_sleep_default=deep rw
 EOT
 
-# Section to turn on trim and reduced reserved block
-echo "Optimizing disks TRIM and noatime..."
-tune2fs -m 1 -o discard /dev/nvme0n1p2
+# Section to reduce reserved block
+echo "Optimizing disks to reduce reserved block..."
+tune2fs -m 1 /dev/nvme0n1p2
