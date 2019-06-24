@@ -41,6 +41,7 @@ echo "Installing the boot loader...\n"
 
 bootctl install
 
+mv /boot/loader/loader.conf /boot/loader/loader.conf.orig
 cat <<EOT >>/boot/loader/loader.conf
 default  arch
 editor   no
