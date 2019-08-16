@@ -30,7 +30,7 @@ mount /dev/nvme0n1p1 /mnt/boot
 echo "Strapping on base and base-devel arch installation (some additional packages too)...\n"
 
 pacstrap /mnt base base-devel dialog ifplugd wpa_supplicant sudo intel-ucode git neovim \
-xf86-input-libinput xf86-video-intel vulkan-intel ttf-font util-linux
+xf86-input-libinput xf86-video-intel vulkan-intel ttf-font util-linux wget
 
 genfstab -L /mnt >>/mnt/etc/fstab
 arch-chroot /mnt
